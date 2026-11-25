@@ -1,0 +1,508 @@
+
+/* =============================================================================
+   PROMPTSHIELD AI — EXTENSION STYLES
+   PWA Install Banner, Scam Intelligence Explorer Enhancements
+   Added: Share to PromptShield + Scam Intelligence Explorer features
+   ============================================================================= */
+
+/* ── PWA Install Banner ───────────────────────────────────────────────────── */
+.pwa-install-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+  border-bottom: 1px solid rgba(56, 189, 248, 0.4);
+  box-shadow: 0 4px 24px rgba(56, 189, 248, 0.15);
+  flex-wrap: wrap;
+}
+
+.pwa-install-banner[hidden] { display: none !important; }
+
+.pwa-banner-content {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.pwa-banner-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.pwa-banner-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.pwa-banner-text strong {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #38BDF8;
+}
+
+.pwa-banner-text span {
+  font-size: 0.78rem;
+  color: #94A3B8;
+}
+
+.pwa-banner-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.pwa-install-btn {
+  padding: 0.4rem 1.1rem;
+  background: linear-gradient(135deg, #38BDF8, #0EA5E9);
+  color: #0A192F;
+  border: none;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  letter-spacing: 0.03em;
+}
+
+.pwa-install-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(56, 189, 248, 0.5);
+}
+
+.pwa-dismiss-btn {
+  background: transparent;
+  border: 1px solid rgba(100, 116, 139, 0.4);
+  color: #64748B;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.pwa-dismiss-btn:hover {
+  color: #CBD5E1;
+  border-color: rgba(100, 116, 139, 0.8);
+}
+
+/* ── Intel Filter Chips ───────────────────────────────────────────────────── */
+.intel-filter-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.filter-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #64748B;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-right: 0.25rem;
+  flex-shrink: 0;
+}
+
+.filter-chip {
+  padding: 0.3rem 0.85rem;
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 20px;
+  color: #94A3B8;
+  font-size: 0.78rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.filter-chip:hover {
+  border-color: rgba(56, 189, 248, 0.5);
+  color: #CBD5E1;
+  background: rgba(56, 189, 248, 0.08);
+}
+
+.filter-chip.active {
+  background: rgba(56, 189, 248, 0.15);
+  border-color: #38BDF8;
+  color: #38BDF8;
+  font-weight: 600;
+}
+
+.filter-chip-reset {
+  background: rgba(100, 116, 139, 0.1);
+  border-color: rgba(100, 116, 139, 0.3);
+  color: #64748B;
+}
+
+.filter-chip-reset:hover {
+  background: rgba(100, 116, 139, 0.2);
+  border-color: rgba(100, 116, 139, 0.6);
+  color: #94A3B8;
+}
+
+/* ── Intel Language Toggle ────────────────────────────────────────────────── */
+.intel-lang-toggle-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.lang-toggle-group {
+  display: flex;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.lang-toggle-btn {
+  padding: 0.3rem 0.85rem;
+  background: transparent;
+  border: none;
+  color: #64748B;
+  font-size: 0.78rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-right: 1px solid rgba(56, 189, 248, 0.15);
+}
+
+.lang-toggle-btn:last-child { border-right: none; }
+
+.lang-toggle-btn:hover {
+  background: rgba(56, 189, 248, 0.08);
+  color: #CBD5E1;
+}
+
+.lang-toggle-btn.active {
+  background: rgba(56, 189, 248, 0.15);
+  color: #38BDF8;
+  font-weight: 600;
+}
+
+/* ── Intel Educational Disclaimer ────────────────────────────────────────── */
+.intel-disclaimer-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.85rem 1.1rem;
+  background: rgba(234, 179, 8, 0.05);
+  border: 1px solid rgba(234, 179, 8, 0.2);
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.disclaimer-icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.disclaimer-text {
+  font-size: 0.8rem;
+  color: #94A3B8;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.disclaimer-text strong {
+  color: #EAB308;
+}
+
+/* ── Expanded Taxonomy Cards ──────────────────────────────────────────────── */
+.taxonomy-card-expanded {
+  display: block !important;  /* override flex from base .taxonomy-card */
+  padding: 0 !important;
+  overflow: hidden;
+}
+
+.tax-details {
+  width: 100%;
+}
+
+.tax-summary-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  transition: background 0.2s ease;
+}
+
+.tax-summary-row::-webkit-details-marker { display: none; }
+
+.tax-summary-row:hover {
+  background: rgba(56, 189, 248, 0.05);
+}
+
+.tax-details[open] .tax-summary-row {
+  background: rgba(56, 189, 248, 0.08);
+  border-bottom: 1px solid rgba(56, 189, 248, 0.15);
+}
+
+.tax-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.tax-header-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.tax-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #E2E8F0;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.tax-category-badge {
+  display: inline-block;
+  padding: 0.15rem 0.6rem;
+  background: rgba(56, 189, 248, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-radius: 10px;
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: #38BDF8;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.tax-expand-hint {
+  font-size: 0.72rem;
+  color: #475569;
+  white-space: nowrap;
+  transition: color 0.2s;
+}
+
+.tax-details[open] .tax-expand-hint {
+  color: #38BDF8;
+}
+
+.tax-body {
+  padding: 1rem 1.25rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.tax-summary-text {
+  font-size: 0.85rem;
+  color: #94A3B8;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.tax-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.tax-section-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #38BDF8;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.tax-how-it-works,
+.tax-why-suspicious {
+  font-size: 0.83rem;
+  color: #94A3B8;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.tax-example-box {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  color: #CBD5E1;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  border-left: 3px solid #38BDF8;
+  border-radius: 6px;
+  padding: 0.65rem 0.85rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.tax-signs-list,
+.tax-victim-steps {
+  margin: 0;
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.tax-signs-list li,
+.tax-victim-steps li {
+  font-size: 0.82rem;
+  color: #94A3B8;
+  line-height: 1.5;
+}
+
+.tax-victim-steps li {
+  color: #CBD5E1;
+}
+
+.tax-action-box {
+  padding: 0.65rem 0.85rem;
+  background: rgba(16, 185, 129, 0.08);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  border-radius: 8px;
+  font-size: 0.82rem;
+  color: #A7F3D0;
+  line-height: 1.6;
+}
+
+.tax-action-box b {
+  color: #34D399;
+}
+
+/* ── Intel Empty State ────────────────────────────────────────────────────── */
+.intel-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 3rem 2rem;
+  text-align: center;
+  grid-column: 1 / -1;
+}
+
+.empty-state-icon {
+  font-size: 2.5rem;
+  opacity: 0.5;
+}
+
+.intel-empty-state p {
+  font-size: 0.88rem;
+  color: #64748B;
+}
+
+.link-btn {
+  background: none;
+  border: none;
+  color: #38BDF8;
+  font-size: inherit;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+}
+
+/* ── Share to PromptShield Instructions Panel ─────────────────────────────── */
+.share-guide-panel {
+  margin-top: 1rem;
+  background: rgba(15, 23, 42, 0.65);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.share-guide-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: #38BDF8;
+  list-style: none;
+  user-select: none;
+  transition: background 0.2s ease;
+}
+
+.share-guide-summary::-webkit-details-marker { display: none; }
+
+.share-guide-summary:hover {
+  background: rgba(56, 189, 248, 0.06);
+}
+
+.share-guide-chevron {
+  font-size: 0.75rem;
+  color: #64748B;
+  transition: transform 0.2s ease;
+}
+
+.share-guide-panel[open] .share-guide-chevron {
+  transform: rotate(90deg);
+  color: #38BDF8;
+}
+
+.share-guide-body {
+  padding: 0.75rem 1rem 1rem;
+  border-top: 1px solid rgba(56, 189, 248, 0.12);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 0.75rem;
+}
+
+.share-guide-step {
+  background: rgba(30, 41, 59, 0.45);
+  border: 1px solid rgba(100, 116, 139, 0.2);
+  border-radius: 8px;
+  padding: 0.7rem 0.85rem;
+  font-size: 0.8rem;
+  color: #CBD5E1;
+  line-height: 1.5;
+}
+
+.share-guide-step strong {
+  display: block;
+  color: #38BDF8;
+  margin-bottom: 0.25rem;
+  font-size: 0.82rem;
+}
+
+/* ── Responsive adjustments ───────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .pwa-install-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .pwa-banner-content { width: 100%; }
+  .pwa-banner-actions { width: 100%; justify-content: flex-end; }
+
+  .intel-filter-row { gap: 0.35rem; }
+  .filter-chip { font-size: 0.72rem; padding: 0.25rem 0.65rem; }
+
+  .tax-summary-row { flex-wrap: wrap; }
+  .tax-expand-hint { width: 100%; text-align: right; font-size: 0.65rem; }
+}
